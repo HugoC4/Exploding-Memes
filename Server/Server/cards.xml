@@ -71,13 +71,6 @@
 		<soundUrl></soundUrl>
 	</card>
 	<card>
-		<type>Explode</type>
-		<text>5</text>
-		<alwaysUse>false</alwaysUse>
-		<imageUrl></imageUrl>
-		<soundUrl></soundUrl>
-	</card>
-	<card>
 		<type>Attack</type>
 		<text>Attack on Trump's wall</text>
 		<alwaysUse>false</alwaysUse>
