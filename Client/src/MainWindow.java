@@ -1,41 +1,18 @@
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.*;
 
-public class MainWindow {
-
-	private JFrame frame;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainWindow window = new MainWindow();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+public class MainWindow extends JFrame{
+	private static final long serialVersionUID = 5429826383952515111L;
+	JButton btn;
+	MainPanel pnl;
+	public MainWindow(){
+		super("Title Bar");
+		setLayout(new BorderLayout());
+		pnl = new MainPanel();
+		btn = new JButton("Button");
+		pnl.add(btn);
+		add(pnl, BorderLayout.CENTER);
+		pack();
 	}
-
-	/**
-	 * Create the application.
-	 */
-	public MainWindow() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
 }
